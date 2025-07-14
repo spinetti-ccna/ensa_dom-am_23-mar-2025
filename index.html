@@ -34,8 +34,12 @@
 
     .header-content {
       position: relative;
-      padding-top: 60px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
     }
 
     .logo {
@@ -44,17 +48,10 @@
       border-radius: 100%;
       object-fit: cover;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      position: absolute;
     }
 
-    .logo-left {
-      top: 10px;
-      left: 10px;
-    }
-
-    .logo-right {
-      top: 10px;
-      right: 10px;
+    .header-text {
+      max-width: 100%;
     }
 
     .header h1, .header h2, .header h3 {
@@ -100,11 +97,7 @@
     }
 
     td:first-child {
-      width: 65%;
-    }
-
-    td:last-child {
-      width: 35%;
+      width: 100%;
     }
 
     .thumbnail-container {
@@ -144,11 +137,6 @@
       opacity: 1;
     }
 
-    .qr-code img {
-      width: 150px;
-      height: auto;
-    }
-
     tr:nth-child(even) {
       background: #f1f5f9;
     }
@@ -175,16 +163,29 @@
     }
 
     @media (max-width: 600px) {
+      body {
+        margin: 10px;
+      }
+
       .container {
-        margin: 20px;
         padding: 15px;
       }
 
-      h1 {
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo {
+        width: 90px;
+        height: 90px;
+      }
+
+      .header h1 {
         font-size: 24px;
       }
 
-      h2, h3 {
+      .header h2, .header h3 {
         font-size: 16px;
       }
 
@@ -193,41 +194,9 @@
         font-size: 12px;
       }
 
-      .thumbnail-container img {
-        width: 100%;
-        max-width: 100%;
-      }
-
       .thumbnail-container .play-button {
         padding: 8px 12px;
         font-size: 12px;
-      }
-
-      .qr-code img {
-        width: 130px;
-      }
-
-      .logo {
-        width: 90px;
-        height: 90px;
-      }
-
-      .logo-left {
-        top: 10px;
-        left: 10px;
-      }
-
-      .logo-right {
-        top: 10px;
-        right: 10px;
-      }
-
-      .header-content {
-        padding-top: 50px;
-      }
-
-      table {
-        margin-top: 30px;
       }
     }
   </style>
@@ -236,19 +205,21 @@
   <div class="container">
     <div class="header">
       <div class="header-content">
-        <img src="imagenes/logo-circular.jpg" alt="Logo Izquierdo" class="logo logo-left">
+        <img src="imagenes/logo-circular.jpg" alt="Logo Izquierdo" class="logo">
         <div class="header-text">
           <h1>Clases del Curso de CCNAv7 (ENSA)</h1>
           <h2>Horario: Domingos / 8:00 a.m. - 12:00 m.</h2>
           <h3>Instructor Gustavo Spinetti</h3>
         </div>
-        <img src="imagenes/cisco-netacad.png" alt="Logo Derecho" class="logo logo-right">
+        <img src="imagenes/cisco-netacad.png" alt="Logo Derecho" class="logo">
       </div>
     </div>
-        <table>
-            <tr>
-                <th>Vista Previa</th>
-            </tr>
+
+    <table>
+      <tr>
+        <th>Vista Previa</th>
+      </tr>
+
 
             <tr>
                 <td>
